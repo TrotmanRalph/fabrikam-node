@@ -1,7 +1,13 @@
 trigger:
 - master
 
-job:
+stages:
+
+-stage: 'Prepare'
+  displayName: 'Prepare'
+
+jobs:
+
 - job: run_build
   pool:
     name:  'ralph-pool'
@@ -29,7 +35,6 @@ job:
   - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     artifact: drop
 
-jobs:
 - deployment: VMDeploy
   displayName: web
   environment:
