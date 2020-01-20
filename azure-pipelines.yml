@@ -1,7 +1,7 @@
 trigger:
 - master
 
-jobs:
+job:
 - job: run_build
   pool:
     name:  'ralph-pool'
@@ -28,7 +28,8 @@ jobs:
       replaceExistingArchive: true
   - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     artifact: drop
-  
+
+Jobs:
 - deployment: VMDeploy
   displayName: web
   environment:
