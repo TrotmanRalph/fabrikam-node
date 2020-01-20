@@ -1,7 +1,7 @@
 - stage: Build
   displayName: Build stage
   pool:
-    name: myVM
+    name:  myVM
   jobs:  
   - job: Build
     displayName: Build
