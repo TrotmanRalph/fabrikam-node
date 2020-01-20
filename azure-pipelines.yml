@@ -28,3 +28,12 @@ jobs:
       replaceExistingArchive: true
   - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     artifact: drop
+
+  jobs:  
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  VMEnv
+    resourceType: VirtualMachine
+    tags: web1
+  strategy:
