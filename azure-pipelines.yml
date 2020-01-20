@@ -29,10 +29,10 @@ jobs:
   - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     artifact: drop
   
-    - deployment: VMDeploy
-    displayName: web
-    environment:
-      name:  VMEnv
-      resourceType: VirtualMachine
-      tags: web1
-    strategy:
+- deployment: VMDeploy
+displayName: web
+environment:
+  name:  VMEnv
+  resourceType: VirtualMachine
+  tags: web1
+strategy:
