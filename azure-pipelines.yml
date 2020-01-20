@@ -30,9 +30,9 @@ jobs:
     artifact: drop
   
 - deployment: VMDeploy
-displayName: web
-environment:
-  name:  VMEnv
-  resourceType: VirtualMachine
-  tags: web1
-strategy:
+  displayName: web
+  environment:
+    name:  VMEnv
+    resourceType: VirtualMachine
+    tags: web1
+  strategy:
